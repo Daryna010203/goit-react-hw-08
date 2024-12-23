@@ -1,5 +1,5 @@
 import * as Yup from 'yup';
-const phoneNumberRegex = /^\d{3}-\d{3}-\d{4}$/g;
+const phoneNumberRegex = /^\d{3}-\d{2}-\d{2}$/g;
 
 export const AddProfileSchema = Yup.object({
   name: Yup.string()
@@ -8,8 +8,5 @@ export const AddProfileSchema = Yup.object({
     .required('Name is required'),
   number: Yup.string()
     .required('Phone is required')
-    .matches(
-      phoneNumberRegex,
-      'Invalid phone number. Phone must be XXX-XXX-XXXX'
-    ),
+    .matches(phoneNumberRegex, 'Invalid phone number. Phone must be XXX-XX-XX'),
 });

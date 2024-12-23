@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom';
-import css from './Layout.module.css';
+import css from './UserMenu.module.css';
 import Header from '../Header/Header';
 
-const Layout = () => {
+const UserMenu = () => {
   return (
     <div>
       <Header />
@@ -11,4 +11,4 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export default UserMenu;

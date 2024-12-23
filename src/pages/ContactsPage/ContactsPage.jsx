@@ -8,7 +8,7 @@ import { fetchContacts } from '../../redux/contactsOps.js';
 import Loader from '../../components/Loader/Loader.jsx';
 import Container from '../../components/Container/Container.jsx';
 
-const Contacts = () => {
+const ContactsPage = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchContacts());
@@ -28,4 +28,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default ContactsPage;

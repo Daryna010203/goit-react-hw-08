@@ -1,4 +1,4 @@
-import css from './RegisterForm.module.css';
+import css from './RegistrationForm.module.css';
 import { Field, Form, Formik } from 'formik';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operations';

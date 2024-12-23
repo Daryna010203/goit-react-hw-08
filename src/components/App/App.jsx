@@ -1,19 +1,19 @@
 import { Route, Routes } from 'react-router-dom';
-import Layout from '../Layout/Layout';
-import Home from '../../pages/Home/Home';
-import Contacts from '../../pages/Contacts/Contacts';
-import Register from '../../pages/Register/Register';
-import Login from '../../pages/Login/Login';
+import UserMenu from '../UserMenu/UserMenu';
+import HomePage from '../../pages/HomePage/HomePage';
+import ContactsPage from '../../pages/ContactsPage/ContactsPage';
+import RegistrationPage from '../../pages/RegistrationPage/RegistrationPage';
+import LoginPage from '../../pages/LoginPage/LoginPage';
 
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="contacts" element={<Contacts />} />
+      <Route path="/" element={<UserMenu />}>
+        <Route index element={<HomePage />} />
+        <Route path="contacts" element={<ContactsPage />} />
       </Route>
-      <Route path="register" element={<Register />} />
-      <Route path="login" element={<Login />} />
+      <Route path="register" element={<RegistrationPage />} />
+      <Route path="login" element={<LoginPage />} />
     </Routes>
   );
 };
