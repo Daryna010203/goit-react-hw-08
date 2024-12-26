@@ -6,7 +6,7 @@ import { selectIsLoading } from '../../redux/contacts/selectors.js';
 import { useEffect } from 'react';
 import { fetchContacts } from '../../redux/contacts/operations.js';
 import Loader from '../../components/Loader/Loader.jsx';
-import Container from '../../components/Container/Container.jsx';
+import Container from '../../components/Layout/Layout.jsx';
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
