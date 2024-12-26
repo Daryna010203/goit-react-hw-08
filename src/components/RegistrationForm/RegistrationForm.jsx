@@ -16,7 +16,7 @@ const RegisterForm = () => {
         navigate('/contacts');
       })
       .catch(() => {
-        toast.error('Спробуй ще раз');
+        toast.error('Try again');
       });
     options.resetForm();
   };
