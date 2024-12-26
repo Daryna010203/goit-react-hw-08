@@ -13,10 +13,10 @@ const RegisterForm = () => {
       .unwrap()
       .then(res => {
         toast(`Welcome ${res?.user?.name}`);
-        navigate('/tasks');
+        navigate('/contacts');
       })
       .catch(() => {
-        toast.error('Друже, ти не правий! Спробуй ще раз');
+        toast.error('Спробуй ще раз');
       });
     options.resetForm();
   };

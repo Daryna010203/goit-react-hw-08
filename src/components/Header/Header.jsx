@@ -12,7 +12,7 @@ const Header = () => {
     <header className={css.header}>
       <h3>Contacts book</h3>
       {isLoggedIn && <div>{user.email}</div>}
-      <ul>
+      <ul className={css.contactsHeader}>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/contacts">Contacts</NavLink>
         {!isLoggedIn && (

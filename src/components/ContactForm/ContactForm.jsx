@@ -3,7 +3,7 @@ import css from './ContactForm.module.css';
 import { Field, Form, Formik, ErrorMessage } from 'formik';
 import { AddProfileSchema } from '../schemas';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactsOps';
+import { addContact } from '../../redux/contacts/operations';
 
 const ContactForm = () => {
   const dispatch = useDispatch();

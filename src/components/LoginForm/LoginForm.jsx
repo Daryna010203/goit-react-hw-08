@@ -18,7 +18,7 @@ const LoginForm = () => {
   };
 
   if (isLoggedIn) {
-    return <Navigate to="/tasks" />;
+    return <Navigate to="/contacts" />;
   }
   return (
     <div className={css.wrapper}>
