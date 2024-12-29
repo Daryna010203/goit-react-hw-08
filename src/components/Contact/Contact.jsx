@@ -3,6 +3,7 @@ import css from './Contact.module.css';
 import { FaUserLarge, FaPhone } from 'react-icons/fa6';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from '../../redux/contacts/operations';
+import DeleteTwoToneIcon from '@mui/icons-material/DeleteTwoTone';
 
 const Contact = ({ name, number, id }) => {
   const dispatch = useDispatch();
@@ -23,7 +24,7 @@ const Contact = ({ name, number, id }) => {
         </div>
       </div>
       <button type="button" onClick={handleDelete}>
-        Delete
+        <DeleteTwoToneIcon />
       </button>
     </>
   );

@@ -1,10 +1,10 @@
 :root {
-  --background-color: #1a1a2e; /* Тёмный фоновый цвет для контраста */
-  --primary-color: #e94560; /* Яркий акцентный цвет */
-  --secondary-color: #0f3460; /* Дополнительный оттенок для форм */
+  --background-color: #1a1a2e;
+  --primary-color: #e94560;
+  --secondary-color: #0f3460;
   --secondary-button-color: rgb(36, 205, 36);
-  --text-color: #f5f5f5; /* Светлый текст */
-  --input-bg: #16213e; /* Фон инпутов */
+  --text-color: #f5f5f5;
+  --input-bg: #16213e;
   --button-hover: #e94560;
   --border-radius: 8px;
   --transition-time: 0.3s;
@@ -22,7 +22,7 @@ body {
   font-family: 'Roboto';
   color: var(--text-color);
   background-color: var(--background-color);
-  background-image: linear-gradient(var(--text-color), var(--background-color)),
+  background-image: linear-gradient(var(--background-color), var(--text-color)),
     url('./assets/watercolor.npg.webp');
   background-blend-mode: overlay;
   background-size: 100%;
@@ -90,7 +90,7 @@ button:active {
 ul {
   list-style-type: none;
 }
-/* Анимация появления */
+
 @keyframes fadeIn {
   from {
     opacity: 0;

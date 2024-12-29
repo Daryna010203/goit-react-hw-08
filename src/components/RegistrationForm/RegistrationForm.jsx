@@ -8,6 +8,7 @@ import toast from 'react-hot-toast';
 const RegisterForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const handleSubmit = (values, options) => {
     dispatch(register(values))
       .unwrap()
@@ -16,15 +17,17 @@ const RegisterForm = () => {
         navigate('/contacts');
       })
       .catch(() => {
-        toast.error('Try again');
+        toast.error('Please, try again! This email is already registered');
       });
     options.resetForm();
   };
+
   const initialValues = {
     name: '',
     email: '',
     password: '',
   };
+
   return (
     <div className={css.wrapper}>
       <h2>Register</h2>

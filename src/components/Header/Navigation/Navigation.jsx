@@ -1,12 +1,11 @@
+import css from './Navigation.module.css';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { selectIsLoggedIn } from '../../../redux/auth/selectors';
-import clsx from 'clsx';
-import css from './Navigation.module.css';
 import { Typography } from '@mui/material';
 import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
-
 import { styled } from '@mui/material/styles';
+import clsx from 'clsx';
 
 const CustomTypography = styled(Typography)({
   flexGrow: 1,

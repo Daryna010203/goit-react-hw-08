@@ -1,3 +1,4 @@
+import css from './ContactPage.module.css';
 import ContactForm from '../../components/ContactForm/ContactForm.jsx';
 import SearchBox from '../../components/SearchBox/SearchBox.jsx';
 import ContactList from '../../components/ContactList/ContactList.jsx';
@@ -6,7 +7,17 @@ import { selectIsLoading } from '../../redux/contacts/selectors.js';
 import { useEffect } from 'react';
 import { fetchContacts } from '../../redux/contacts/operations.js';
 import Loader from '../../components/Loader/Loader.jsx';
-import css from './ContactPage.module.css';
+import { Paper, styled } from '@mui/material';
+
+const CustomPaper = styled(Paper)({
+  padding: 4,
+  maxWidth: 700,
+  textAlign: 'center',
+  boxShadow: 3,
+  backgroundColor: '#0f3460',
+  color: '#f5f5f5',
+  borderRadius: '8px',
+});
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
@@ -16,13 +27,13 @@ const ContactsPage = () => {
   const isLoading = useSelector(selectIsLoading);
 
   return (
-    <div className={css.container}>
+    <CustomPaper>
       <h1 className={css.title}>Phonebook</h1>
       <ContactForm />
       <SearchBox />
       {isLoading && <Loader />}
       <ContactList />
-    </div>
+    </CustomPaper>
   );
 };
 

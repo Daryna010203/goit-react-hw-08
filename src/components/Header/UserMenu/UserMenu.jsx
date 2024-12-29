@@ -1,7 +1,7 @@
+import css from './UserMenu.module.css';
 import { useDispatch } from 'react-redux';
 import { logout } from '../../../redux/auth/operations';
 import { selectUser } from '../../../redux/auth/selectors';
-import css from './UserMenu.module.css';
 import { useSelector } from 'react-redux';
 import { Button } from '@mui/material';
 import LogoutTwoToneIcon from '@mui/icons-material/LogoutTwoTone';
@@ -11,7 +11,18 @@ import { styled } from '@mui/material/styles';
 const CustomTypography = styled(Typography)({
   display: 'flex',
   alignItems: 'center',
-  margin: '16px',
+  margin: '8px',
+});
+
+const CustomButton = styled(Button)({
+  display: 'flex',
+  flexWrap: 'wrap',
+  marginTop: 2,
+  fontWeight: '600',
+  borderRadius: 8,
+  fontSize: 'large',
+  paddingRight: 16,
+  paddingLeft: 16,
 });
 
 const UserMenu = () => {
@@ -22,14 +33,14 @@ const UserMenu = () => {
     <div>
       <CustomTypography>
         <p className={css.menu}> Welcome, {user.name}</p>
-        <Button
+        <CustomButton
           color="inherit"
           onClick={() => dispatch(logout())}
           endIcon={<LogoutTwoToneIcon />}
         >
           {' '}
-          <span className={css.btnOut}>Logout</span>
-        </Button>
+          Logout
+        </CustomButton>
       </CustomTypography>
     </div>
   );

@@ -1,6 +1,4 @@
 import { NavLink } from 'react-router-dom';
-import clsx from 'clsx';
-import css from './AuthNav.module.css';
 import { Typography } from '@mui/material';
 import LoginIcon from '@mui/icons-material/Login';
 import { Button } from '@mui/material';
@@ -13,33 +11,43 @@ const CustomTypography = styled(Typography)({
   gap: '8px',
 });
 
+const CustomButton = styled(Button)({
+  marginTop: 2,
+  fontWeight: '600',
+  borderRadius: 8,
+  fontSize: 'large',
+  color: ' #f5f5f5',
+  transition: 'background-color var(--transition-time), transform 0.2s',
+  '&:hover': {
+    transform: 'scale(1.05)',
+    backgroundColor: 'rgb(36, 205, 36)',
+  },
+  '&:active': {
+    transform: 'scale(0.98)',
+  },
+});
+
 const AuthNav = () => {
   return (
     <div>
       <CustomTypography>
         <NavLink to="/register">
-          <Button
+          <CustomButton
             color="inherit"
-            endIcon={<HowToRegIcon />}
-            sx={{
-              ':hover': { backgroundColor: 'rgb(36, 205, 36)' },
-            }}
+            endIcon={<HowToRegIcon sx={{ color: ' #f5f5f5' }} />}
           >
             {' '}
-            <span className={css.btnOut}>Register</span>
-          </Button>
+            Register
+          </CustomButton>
         </NavLink>
         <NavLink to="/login">
-          <Button
+          <CustomButton
             color="inherit"
-            endIcon={<LoginIcon color="white" />}
-            sx={{
-              ':hover': { backgroundColor: 'rgb(36, 205, 36)' },
-            }}
+            endIcon={<LoginIcon sx={{ color: ' #f5f5f5' }} />}
           >
             {' '}
-            <span className={css.btnOut}>Log In</span>
-          </Button>
+            LogIn
+          </CustomButton>
         </NavLink>
       </CustomTypography>
     </div>

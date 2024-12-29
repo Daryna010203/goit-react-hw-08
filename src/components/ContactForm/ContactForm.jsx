@@ -4,6 +4,7 @@ import { Field, Form, Formik, ErrorMessage } from 'formik';
 import { AddProfileSchema } from '../schemas';
 import { useDispatch } from 'react-redux';
 import { addContact } from '../../redux/contacts/operations';
+import PersonAddTwoToneIcon from '@mui/icons-material/PersonAddTwoTone';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -46,7 +47,7 @@ const ContactForm = () => {
               component="span"
             />
             <button type="submit" className={css.btn}>
-              Add contact
+              <PersonAddTwoToneIcon />
             </button>
           </Form>
         )}
