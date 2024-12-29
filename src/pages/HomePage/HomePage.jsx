@@ -58,16 +58,15 @@ const HomePage = () => {
       <Typography variant="body1" color="#f5f5f5" gutterBottom>
         <ArrowDownwardTwoToneIcon />
       </Typography>
-      {isLoggedIn && (
+      {isLoggedIn ? (
         <NavLink to="/contacts">
           <CustomButton variant="contained" href="/contacts">
             Go to Contacts
           </CustomButton>
         </NavLink>
-      )}
-      {!isLoggedIn && (
+      ) : (
         <NavLink to="/login">
-          <CustomButton variant="contained" href="/login">
+          <CustomButton variant="contained" href="//contacts">
             Go to Contacts
           </CustomButton>
         </NavLink>
