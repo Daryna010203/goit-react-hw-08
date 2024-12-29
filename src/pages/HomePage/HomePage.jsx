@@ -2,6 +2,9 @@ import { Paper, Typography, Button } from '@mui/material';
 import myImage from '../../assets/contact.jpg';
 import { styled } from '@mui/material';
 import ArrowDownwardTwoToneIcon from '@mui/icons-material/ArrowDownwardTwoTone';
+import { useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
 
 const CustomButton = styled(Button)({
   marginTop: 2,
@@ -19,6 +22,8 @@ const CustomButton = styled(Button)({
 });
 
 const HomePage = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+
   return (
     <Paper
       sx={{
@@ -43,9 +48,8 @@ const HomePage = () => {
         Welcome to the Contact Book!
       </Typography>
       <Typography variant="body1" color="#f5f5f5" gutterBottom>
-        This is your personal contact management app. Keep your phone numbers
-        numbers, names and other important information in a convenient and
-        secure form.
+        This is your personal contact management app. Keep your phone numbers,
+        names and other important information in a convenient and secure form.
       </Typography>
       <Typography variant="body1" color="#f5f5f5" gutterBottom>
         Add new contacts, edit existing ones and delete unnecessary. Everything
@@ -54,15 +58,20 @@ const HomePage = () => {
       <Typography variant="body1" color="#f5f5f5" gutterBottom>
         <ArrowDownwardTwoToneIcon />
       </Typography>
-
-      <CustomButton
-        variant="contained"
-        color="primary"
-        href="/contacts"
-        sx={{}}
-      >
-        Go to Contacts
-      </CustomButton>
+      {isLoggedIn && (
+        <NavLink to="/contacts">
+          <CustomButton variant="contained" href="/contacts">
+            Go to Contacts
+          </CustomButton>
+        </NavLink>
+      )}
+      {!isLoggedIn && (
+        <NavLink to="/login">
+          <CustomButton variant="contained" href="/login">
+            Go to Contacts
+          </CustomButton>
+        </NavLink>
+      )}
     </Paper>
   );
 };
