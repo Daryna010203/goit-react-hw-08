@@ -17,15 +17,18 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: 'Roboto';
   color: var(--text-color);
   background-color: var(--background-color);
-  background-image: linear-gradient(var(--background-color), var(--text-color)),
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
     url('./assets/watercolor.npg.webp');
   background-blend-mode: overlay;
-  background-size: 100%;
+  background-size: cover;
+  background-attachment: fixed;
   min-height: 100vh;
 }
 
