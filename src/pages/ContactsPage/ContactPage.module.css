@@ -1,0 +1,9 @@
+.title {
+  text-align: center;
+}
+
+.container {
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  margin-top: 16px;
+}

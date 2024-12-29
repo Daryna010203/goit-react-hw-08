@@ -1,0 +1,12 @@
+.wrapper {
+  display: flex;
+}
+
+.menu {
+  margin-right: 16px;
+}
+
+.btnOut {
+  font-size: large;
+  font-weight: 600;
+}

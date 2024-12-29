@@ -6,6 +6,7 @@ import { selectIsLoading } from '../../redux/contacts/selectors.js';
 import { useEffect } from 'react';
 import { fetchContacts } from '../../redux/contacts/operations.js';
 import Loader from '../../components/Loader/Loader.jsx';
+import css from './ContactPage.module.css';
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
@@ -15,13 +16,13 @@ const ContactsPage = () => {
   const isLoading = useSelector(selectIsLoading);
 
   return (
-    <>
-      <h1>Phonebook</h1>
+    <div className={css.container}>
+      <h1 className={css.title}>Phonebook</h1>
       <ContactForm />
       <SearchBox />
       {isLoading && <Loader />}
       <ContactList />
-    </>
+    </div>
   );
 };
 

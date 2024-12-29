@@ -10,7 +10,7 @@ import RegistrationPage from '../../pages/RegistrationPage/RegistrationPage';
 import LoginPage from '../../pages/LoginPage/LoginPage';
 import PrivatRoute from '../PrivatRoute/PrivatRoute';
 import RestrictedRoute from '../RestrictedRoute/RestrictedRoute';
-import Layout from '../Layout/Layout';
+import Layout from '../Header/Layout/Layout';
 
 const App = () => {
   const dispatch = useDispatch();

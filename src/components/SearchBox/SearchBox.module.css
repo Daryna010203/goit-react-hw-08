@@ -1,16 +1,19 @@
 .search {
   padding: 12px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .text {
   margin-bottom: 12px;
+  text-align: center;
 }
 
 .input {
-  width: 400px;
   padding: 8px 12px;
   border-radius: var(--border-radius);
   border: 1px solid var(--text-color);
+  width: 100%;
 }
 
 .input:hover,
